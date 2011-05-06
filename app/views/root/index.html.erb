@@ -1,0 +1,12 @@
+<div class="column" id='stream_column'>
+  <h3>Stream
+    <a id='more-items' style='color:<%= layout['topcolor']%>'></a>
+  </h3>
+  <%= htmlstream 'stream' %>
+</div>
+
+<%= render 'root/active_stories'%>
+
+<script>
+  <%= render :file => 'root/_index.js.erb' %>
+</script>

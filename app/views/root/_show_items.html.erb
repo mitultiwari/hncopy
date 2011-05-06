@@ -1,0 +1,7 @@
+<% items.each do |item| %>
+  <%= render 'root/show_item', :item => item %>
+<% end %>
+
+<% unless items.empty? %>
+  <div class='newrequest'></div>
+<% end %>

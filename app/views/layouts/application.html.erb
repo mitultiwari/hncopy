@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title><%= layout['title']%></title>
+    <%= stylesheet_link_tag :all %>
+    <link rel="stylesheet" media="handheld" href="/stylesheets/handheld/application.css"/>
+    <link rel="stylesheet" media="screen and (max-device-width: 801px)" href="/stylesheets/handheld/application.css"/>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+  </head>
+
+  <body>
+    <div id="pagetop" style="background: <%= layout['topcolor']%>">
+      <div style='height:18px'>
+        <div style='float:right; margin-right:5px'><a href='mailto:feedback@readwarp.com'>feedback</a></div>
+        <b><a target="_blank" href="<%= layout['root']%>/"><%= layout['title']%></a></b>
+        <img height="1" width="10" src="/images/s.gif">
+        <a id='active_stories_link' href='active_stories'>active stories</a> |
+        <a id='active_users_link' href='active_users'>active users</a> |
+        <a target="_blank" href="<%= layout['root']%>/submit">submit</a>
+      </div>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>
